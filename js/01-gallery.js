@@ -24,11 +24,11 @@ function onGalleryItemClick(e){
         return;        
     }
 
-basicLightbox.create(`
+const instance = basicLightbox.create(`
     <div class="modal">
-    <img src='${e.target.dataset.source}'>
+    <img src='${e.target.dataset.source}' width="800" height="600">
     </div>
 `)
-.show()
+instance.show()
 };
 
