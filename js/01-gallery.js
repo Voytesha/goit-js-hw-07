@@ -21,14 +21,14 @@ function onGalleryItemClick(e){
     e.preventDefault();
 
     if(e.target.nodeName !== 'IMG'){
-        return
+        return;        
     }
 
-const instance = basicLightbox.create(`
+basicLightbox.create(`
     <div class="modal">
     <img src='${e.target.dataset.source}'>
     </div>
 `)
-
-instance.show()
+.show()
 };
+
